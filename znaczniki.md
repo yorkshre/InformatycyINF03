@@ -1,5 +1,5 @@
 # Kompendium Znaczników HTML
-**Ściąga dla Technika Programisty (INF.03 / INF.04)**
+**Ściąga dla Technika Informatyka/Programisty (INF.03)**
 
 ---
 
