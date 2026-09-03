@@ -55,12 +55,12 @@ Kaskadowe Arkusze Stylów to język używany do definiowania wyglądu i układu 
 * **`html`** – główny element określający, że jest to dokument HTML. Wewnątrz znajdują się dwa kluczowe elementy: `head` oraz `body`.
 * **`head`** – zawiera metadane i informacje o dokumencie (tytuł, meta tagi, style CSS itp.). Definiuje ważne informacje o stronie, które nie są wyświetlane bezpośrednio w oknie przeglądarki.
 * **`title`** – określa tytuł strony internetowej wyświetlany na pasku tytułu lub karcie przeglądarki.
-* **`meta`** – służy do definiowania informacji o dokumencie (opis strony, słowa kluczowe, kodowanie znaków itp.)[cite: 3]. Jest ważny dla wyszukiwarek internetowych i wspomaga pozycjonowanie (SEO)[cite: 3].
-* **`body`** – określa właściwą zawartość strony wyświetlaną w okienku przeglądarki (nagłówki, tekst, obrazy, linki)[cite: 3].
-* **`header`** – nagłówek strony lub sekcji, zazwyczaj zawiera logo, menu nawigacyjne i inne informacje na temat strony[cite: 3].
-* **`nav`** – sekcja zawierająca menu nawigacyjne na stronie internetowej[cite: 3].
-* **`main`** – definiuje główną treść strony (unikalną dla danego dokumentu)[cite: 3].
-* **`section`** – wydzielona sekcja tematyczna strony (np. wpis na blogu, artykuł, galeria zdjęć)[cite: 3].
+* **`meta`** – służy do definiowania informacji o dokumencie (opis strony, słowa kluczowe, kodowanie znaków itp. Jest ważny dla wyszukiwarek internetowych i wspomaga pozycjonowanie (SEO).
+* **`body`** – określa właściwą zawartość strony wyświetlaną w okienku przeglądarki (nagłówki, tekst, obrazy, linki)
+* **`header`** – nagłówek strony lub sekcji, zazwyczaj zawiera logo, menu nawigacyjne i inne informacje na temat strony.
+* **`nav`** – sekcja zawierająca menu nawigacyjne na stronie internetowej.
+* **`main`** – definiuje główną treść strony (unikalną dla danego dokumentu).
+* **`section`** – wydzielona sekcja tematyczna strony (np. wpis na blogu, artykuł, galeria zdjęć).
 * **`article`** – samodzielna, niezależna treść (artykuł, post na blogu, recenzja, komentarz)[cite: 3].
 * **`aside`** – treść poboczna (np. pasek boczny, reklamy, lista kategorii, menu)[cite: 3].
 * **`footer`** – stopka strony lub sekcji (autor, prawa autorskie, linki powiązane, kontakt)[cite: 3].
