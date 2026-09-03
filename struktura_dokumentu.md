@@ -61,14 +61,14 @@ Kaskadowe Arkusze Stylów to język używany do definiowania wyglądu i układu 
 * **`nav`** – sekcja zawierająca menu nawigacyjne na stronie internetowej.
 * **`main`** – definiuje główną treść strony (unikalną dla danego dokumentu).
 * **`section`** – wydzielona sekcja tematyczna strony (np. wpis na blogu, artykuł, galeria zdjęć).
-* **`article`** – samodzielna, niezależna treść (artykuł, post na blogu, recenzja, komentarz)[cite: 3].
-* **`aside`** – treść poboczna (np. pasek boczny, reklamy, lista kategorii, menu)[cite: 3].
-* **`footer`** – stopka strony lub sekcji (autor, prawa autorskie, linki powiązane, kontakt)[cite: 3].
+* **`article`** – samodzielna, niezależna treść (artykuł, post na blogu, recenzja, komentarz).
+* **`aside`** – treść poboczna (np. pasek boczny, reklamy, lista kategorii, menu).
+* **`footer`** – stopka strony lub sekcji (autor, prawa autorskie, linki powiązane, kontakt).
 
 ---
 
 ## 4. Deklaracja DOCTYPE
-Deklaracja `DOCTYPE` to linijka kodu umieszczana na samym początku dokumentu HTML, która informuje przeglądarkę internetową, jakiej wersji HTML należy używać do poprawnego wyświetlenia strony[cite: 3]. Jest to kluczowa informacja, ponieważ różne wersje mają odmienne zasady i składnię[cite: 3].
+Deklaracja `DOCTYPE` to linijka kodu umieszczana na samym początku dokumentu HTML, która informuje przeglądarkę internetową, jakiej wersji HTML należy używać do poprawnego wyświetlenia strony. Jest to kluczowa informacja, ponieważ różne wersje mają odmienne zasady i składnię.
 
 
 ### HTML 4.01 Strict (starsza wersja)
@@ -76,12 +76,12 @@ Deklaracja `DOCTYPE` to linijka kodu umieszczana na samym początku dokumentu HT
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "[http://www.w3.org/TR/html4/strict.dtd](http://www.w3.org/TR/html4/strict.dtd)">
 ```
 
-> **Warto zaznaczyć:** Deklaracja `DOCTYPE` w starszych wersjach HTML była bardziej skomplikowana i zawierała szczegółowe odwołania do DTD (Document Type Definition), które określały dokładnie dozwalane elementy i atrybuty[cite: 3]. W HTML5 proces ten został maksymalnie uproszczony[cite: 3].
+> **Warto zaznaczyć:** Deklaracja `DOCTYPE` w starszych wersjach HTML była bardziej skomplikowana i zawierała szczegółowe odwołania do DTD (Document Type Definition), które określały dokładnie dozwalane elementy i atrybuty[cite: 3]. W HTML5 proces ten został maksymalnie uproszczony.
 ---
 
 ## 5. Element `<head>` w szczegółach
 
-Element `<head>` definiuje informacje o dokumencie, które nie są widoczne bezpośrednio na stronie, ale są niezbędne dla przeglądarki oraz robotów indeksujących wyszukiwarek[cite: 3]. Umieszcza się go pomiędzy otwierającym tagiem `<html>` a otwierającym tagiem `<body>`[cite: 3].
+Element `<head>` definiuje informacje o dokumencie, które nie są widoczne bezpośrednio na stronie, ale są niezbędne dla przeglądarki oraz robotów indeksujących wyszukiwarek]. Umieszcza się go pomiędzy otwierającym tagiem `<html>` a otwierającym tagiem `<body>`.
 
 ### Kluczowe elementy wewnątrz `<head>`:
 
