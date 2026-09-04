@@ -91,8 +91,14 @@ Zanim przejdziesz do zadań, poznaj kluczową trójcę właściwości odpowiedzi
 * **`align-self`**: Pozwala nadpisać globalne `align-items` dla konkretnego, pojedynczego elementu potomnego.
 
 ---
+## 4 Jak Flexbox wspiera responsywność? (Kluczowe informacje)
 
-## 4. Ćwiczenia z rozwiązaniami
+Flexbox został zaprojektowany z myślą o urządzeniach różnej wielkości. Aby Twoje projekty były w pełni responsywne, warto pamiętać o kilku mechanizmach:
+
+* **Automatyczne dopasowanie i elastyczność (`flex-grow`, `flex-shrink`)**: Zamiast podawać sztywne szerokości w pikselach (`width: 300px`), elementy mogą automatycznie rozszerzać się lub kurczyć w zależności od dostępnego miejsca w oknie przeglądarki[cite: 1].  
+* **Zawijanie elementów (`flex-wrap: wrap`)**: Domyślnie Flexbox próbuje zmieścić wszystko w jednej linii, co na małych ekranach telefonów mogłoby zniszczyć układ. Użycie `flex-wrap: wrap` sprawia, że elementy automatycznie wskakują do kolejnego wiersza, gdy zabraknie miejsca[cite: 1].  
+* **Kombinacja z zapytaniami o media (`@media queries`)**: Flexbox ułatwia zmianę kierunku układu (np. z poziomego `row` na pionowy `column`) za pomocą jednego zapytania w CSS, co idealnie sprawdza się przy przechodzeniu z widoku desktopowego na mobilny[cite: 1].
+## 5. Ćwiczenia z rozwiązaniami
 
 ### Ćwiczenie 1: Paski nawigacji (menu rozłożone na boki)
 **Zadanie:** Stwórz pasek nawigacji, w którym logo znajduje się po lewej stronie, a linki menu po prawej.
