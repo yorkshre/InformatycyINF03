@@ -11,7 +11,7 @@ Służą do budowy szkieletu dokumentu HTML oraz zdefiniowania podstawowych elem
 | :--- | :--- |
 | `<!DOCTYPE>` | Deklaracja typu dokumentu (w HTML5: `<!DOCTYPE html>`). |
 | `<html>` | Główny element korzenny (*root*) zawierający cały dokument HTML. |
-| `<head>` | Nagłówek dokumentu – zawiera metadane, tytuł oraz odnośniki do zasobów. |
+| `<head>` | Nagłówek dokumentu – zawiera metadane, tytuł oraz odnośniki do zasobów oraz kodowanie znaków. |
 | `<title>` | Tytuł dokumentu wyświetlany na karcie przeglądarki. |
 | `<body>` | Ciało dokumentu – zawiera całą widoczną treść strony. |
 | `<h1>` do `<h6>` | Nagłówki tekstu hierarchiczne (od najważniejszego `<h1>` do najmniej ważnego `<h6>`). |
