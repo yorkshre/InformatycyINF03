@@ -23,7 +23,7 @@ Znaczniki zapisujemy w nawiasach ostrych `< >`. Występują w dwóch głównych 
    ```html
    <p>To jest akapit tekstu.</p>
    <h1>Nagłówek główny</h1>
-2. **Znaczniki nieparzyste / samozamykające ** – nie zawierają treści ani znacznika zamykającego:
+2. **Znaczniki nieparzyste / samozamykające** – nie zawierają treści ani znacznika zamykającego:
    ```html
    <br>  <!-- złamanie linii -->
    <hr>  <!-- pozioma linia podziału -->
