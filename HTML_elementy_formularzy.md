@@ -96,9 +96,9 @@ Czyli:
 * jest pomocny dla użytkowników korzystających z czytników ekranu,
 * pozwala między innymi kliknąć tekst etykiety przy polach wyboru, takich jak checkbox lub radio.
 
-Właściwe powiązanie `for` z `id` jest ważnym elementem poprawnej konstrukcji formularza. citeturn0view0
+Właściwe powiązanie `for` z `id` jest ważnym elementem poprawnej konstrukcji formularza.
 
-\---
+---
 
 # 4\. Element `<select>`
 
@@ -119,7 +119,7 @@ Element `<select>` tworzy **listę rozwijaną**.
 
 Użytkownik może wybrać jedną z dostępnych pozycji.
 
-\---
+---
 
 ## 4.1. Element `<option>`
 
@@ -144,7 +144,7 @@ Domyślnie zaznaczona jest pierwsza opcja. Można jednak wskazać inną opcję z
 </select>
 ```
 
-\---
+---
 
 ## 4.2. Atrybut `size`
 
@@ -161,7 +161,7 @@ Atrybut `size` pozwala określić liczbę widocznych pozycji.
 
 W tym przypadku jednocześnie widoczne są trzy pozycje. citeturn0view0
 
-\---
+---
 
 ## 4.3. Atrybut `multiple`
 
@@ -178,7 +178,7 @@ Atrybut `multiple` pozwala użytkownikowi wybrać więcej niż jedną opcję.
 
 Jest to przydatne wtedy, gdy użytkownik może zaznaczyć kilka odpowiedzi. citeturn0view0
 
-\---
+---
 
 # 5\. Element `<textarea>`
 
