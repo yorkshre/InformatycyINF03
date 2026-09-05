@@ -25,9 +25,7 @@ Element `<form>` może zawierać różne elementy formularza, między innymi:
 * `<output>`
 * `<option>`
 * `<optgroup>`
-* 
-
-\---
+  
 
 # 2\. Element `<input>`
 
