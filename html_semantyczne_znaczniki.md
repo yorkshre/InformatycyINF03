@@ -223,3 +223,123 @@ Podczas wyprzedaży "Flash Sale" w sklepie e-commerce trzeba wygenerować unikal
 * Zastosuj znacznik `<meter>` do pokazania poziomu naładowania baterii/oceny produktu lub stanu magazynowego.
 * Zastosuj znacznik `<progress>` do pokazania postępu wyprzedaży (np. "Sprzedano 75% puli promocyjnej").
 * Dołącz specyfikację w postaci semantycznej tabeli (`<table>`, `<thead>`, `<tbody>`), zawierającej parametry sprzętu.
+
+**Rozwiązanie do zadania**
+  ```html
+  <!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <title>Tytuł strony</title>
+        <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+            padding: 20px;
+            max-width: 800px;
+            margin:0;
+        }
+        article{
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .product-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .price{
+            font-size: 1.5em;
+            font-weight: bold;
+            color:#c00;
+        }
+        .specs-table{
+            width:100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+
+        }
+        .specs-table th,.specs-table td{
+            border:1px solid #ddd;
+            padding:8px;
+            text-align: left;
+        }
+        .specs-table th{
+            background-color: #f2f2f2;
+
+        }
+        .promo-meter, .stock-meter{
+            width: 100%;
+            height: 20px;
+            margin-top: 5px;
+        }
+
+            </style>
+    </head>
+    <body>
+       <h1>Sklep online</h1>
+       <!--Głowny kontener produktu-->
+       <article>
+        <div class="product-header">
+            <h2>Bateria do laptopa</h2>
+            <span class="price">249,00 PLN<span>
+                    </div>
+        <p>Spis baterii dostępnych w sklepie</p>
+        <h3>Stan magazynowy</h3>
+       <label for="sale-progress">Wyprzedano 75% puli promocyjnej:</label><br>
+        <progress id="sale-progress" class="promo-meter" value="75" max="100">75%</progress>
+        <p>Pozostało niewiele sztuk w tej cenie! Kup teraz.</p>
+        
+        <h3>Stan magazynowy / Baterii</h3>
+        <label for="battery-meter">Poziom naładowania baterii (test):</label><br>
+        <!-- Użycie <meter> dla stanu, który nie jest postępem (np. ocena, stan baterii) -->
+        <meter id="battery-meter" class="stock-meter" value="40" min="0" max="100" low="20" high="80" optimum="90">40%</meter>
+        <p>Bateria rozładowana – wymaga podłączenia do ładowania przed pierwszym użyciem.</p>
+
+        <h3>Specyfikacja techniczna</h3>
+        <!--Sematyczna tabela danych-->
+        <table class="specs-table">
+            <caption>Szczegółowe parametry techniczne</caption>
+            <thead>
+                <tr>
+                    <th>Parametr</th>
+                    <th>Wartość</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Napięcie</th>
+                <td>11.1V</td>
+            </tr>
+            <tr>
+                <th>Pojemność</th>
+                <td>6600 mAh</td>
+            </tr>
+            <tr>
+                <th>Technologia</th>
+                <td>Litowo-jonowa</td>
+            </tr>
+            <tr>
+                <th>Liczba ogniw</th>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>Kolor</th>
+                <td>Czarny</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+       </article>
+            
+    </body>
+</html>
+```
