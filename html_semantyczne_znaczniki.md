@@ -145,7 +145,74 @@ Znany fotograf zamówił nowoczesną stronę ze swoim portfolio. Kluczowym wymog
 * W opisie przynajmniej jednego zdjęcia użyj znacznika `<time>` wskazującego dokładną datę zrobienia fotografii.
 * Zgrupuj całą galerię w sekcji tematycznej (`<section>`) i dodaj do niej nagłówek.
 
+**Rozwiązanie z stylem**
+```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tytuł Strony - Technik Programista</title>
+    <style>
+        .galery-container{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        figure{
+            border:1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+            margin:0;
+            text-align: center;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        figcaption{
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+   <section>
+    <h2>Wybrane realizacje</h2>
+    <p>Galeria zdjęć odnośnie jezizor</p>
+    <div class="galery-container">
+        <!--Zdjęcie 1 -->
+        <figure>
+            <img src="images.jpg" alt="Widok na jezioro">
+            <figcaption>Fotografia z internetu</figcaption>
+            <small>Data wykonannia zdjęcia: <time datetime="2025-07-15">15 lipca 2025</small>
+        </figure>
+        <!--Drugie zdjęcie-->
+          <figure>
+            <img src="images1.jpg" alt="Widok na krajobraz jeziorny">
+            <figcaption>Fotografia z strony fotografa</figcaption>
+        </figure>
+                <!--3 zdjęcie-->
+
+        <figure>
+            <img src="images2.jpg" alt="Widok na krajobraz jeziorny">
+            <figcaption>Fotografia z strony fotografa</figcaption>
+        </figure>
+    </div>
+
+
+   </section>
+
+</body>
+</html>
+```
 ---
+
 
 ### Zadanie 5: Sklep Internetowy - Karta Produktu i Pasek Postępu Promocji
 **Opis z życia:**  
