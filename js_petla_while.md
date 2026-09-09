@@ -1,8 +1,35 @@
-***Javascript pętla while***
+# Pętle warunkowe i instrukcje sterujące w JavaScript
 
-Kiedy masz już stronę z elementem <script> (lub odwołanie 
-do oddzielnego pliku JavaScript), możesz rozpocząć kodowanie. JavaScript jest pełnowartościowym językiem programowania, więc możesz w nim robić większość tego co w innych językach, 
-a właściwie nawet więcej, ponieważ programujemy w nim wewnątrz strony internetowej.
+## 1. Pętle sterowane warunkiem (`while` oraz `do..while`)
+
+W przeciwieństwie do pętli `for`, w pętlach warunkowych **nie musimy z góry określać dokładnej liczby iteracji**. Kod wewnątrz pętli wykonuje się powtarzalnie, dopóki warunek zawarty w nawiasie zwraca wartość logiczną `true`.
+
+### Porównanie pętli `while` i `do..while`
+
+| Cecha | Pętla `while` | Pętla `do..while` |
+| :--- | :--- | :--- |
+| **Moment sprawdzania warunku** | **Na początku** bloku (przed wykonaniem kodu) | **Na końcu** bloku (po wykonaniu kodu) |
+| **Gwarantowana liczba wykonań** | **`0` razy** (gdy warunek od razu jest fałszywy) | **Minimum `1` raz** (kod zawsze uruchomi się przynajmniej raz) |
+| **Główne zastosowanie** | Gdy wykonanie bloku zależy od wstępnego warunku | Gdy akcja musi wykonać się co najmniej raz (np. pobranie danych) |
+
+---
+
+### Przykłady kodu
+
+```javascript
+// Pętla while – warunek sprawdzany na początku
+let puszki = 0;
+
+while (puszki > 0) {
+    console.log("To się NIGDY nie wyświetli, bo puszki = 0");
+    puszki--;
+}
+
+// Pętla do..while – warunek sprawdzany na końcu
+do {
+    console.log("To wyświetli się DOKŁADNIE RAZ, mimo że puszki = 0");
+    puszki--;
+} while (puszki > 0);
 
 ```js
 // Deklaruje zmienną i przypisuje jej wartość "napoju energetycznego".
@@ -53,5 +80,6 @@ while (cans > 0) {
 // na niej widoczny.
 document.write(lyrics);
 ```
+
 
 
