@@ -3,7 +3,7 @@
 
 ##1. Wykorzystanie zmiennych w skryptach
 
-Przedstawię kilka przykładów wykorzystania zmiennych w sktypcie i operacji na nich.
+Przedstawię kilka przykładów wykorzystania zmiennych w skrypcie i operacji na nich.
 
 
 ```js
