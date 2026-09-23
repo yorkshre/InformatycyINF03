@@ -150,5 +150,4 @@ Komentarz rozpoczyna się od `<!--` a kończy na `-->`.
 2. Dlaczego stosowanie atrybutu `alt` w znaczniku `<img>` jest obowiązkowe ze względów dostępności i SEO?
 3. Jak zamieścić komentarz wieloliniowy w kodzie HTML?
 4. Co się stanie, jeśli zapomnisz zamknąć znacznika parzystego (np. `<div>`)?
-HTML_Znaczniki_Atrybuty_Komentarze_Caly_Dokument-v2.md
-Wyświetlam HTML_Znaczniki_
+
