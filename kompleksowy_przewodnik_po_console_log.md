@@ -45,4 +45,4 @@ Poza klasycznym `log()`, do dyspozycji masz inne przydatne metody:
 
 
 ```javascript
-// Twoje rozwiązanie:
+
