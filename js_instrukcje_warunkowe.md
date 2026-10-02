@@ -301,8 +301,8 @@ Do tworzenia warunków wykorzystujemy operatory porównania.
 
   Operator   Znaczenie
   ---------- -----------------------------------------
-  `==`       równe
-  `===`      identyczne pod względem wartości i typu
+  `==`       równe (porównanie luźne)
+  `===`      identyczne pod względem wartości i typu(porównanie ścisłe)
   `!=`       różne
   `!==`      różne pod względem wartości lub typu
   `>`        większe
