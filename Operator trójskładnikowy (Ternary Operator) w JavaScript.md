@@ -76,7 +76,7 @@ console.log(czyPelnoletni); // Wynik: "Nie"
 * **Do prostych przypisań:** Kiedy chcesz przypisać jedną z dwóch wartości do zmiennej w zależności od prostego warunku.
 * **Do czytelności (w umiarze):** Kod staje się krótszy i bardziej przejrzysty.
 
-> ⚠️ **Ważna uwaga:** Unikaj "zagnieżdżania" operatorów trójskładnikowych w sobie (np. warunek ? (inny_warunek ? a : b) : c). Zamiast pomóc, sprawi to, że kod stanie się trudny do odczytania i zrozumienia przez innych programistów! W skomplikowanych przypadkach zawsze lepiej użyć tradycyjnego `if...else` lub instrukcji `switch`.
+> **Ważna uwaga:** Unikaj "zagnieżdżania" operatorów trójskładnikowych w sobie (np. warunek ? (inny_warunek ? a : b) : c). Zamiast pomóc, sprawi to, że kod stanie się trudny do odczytania i zrozumienia przez innych programistów! W skomplikowanych przypadkach zawsze lepiej użyć tradycyjnego `if...else` lub instrukcji `switch`.
 
 ---
 
