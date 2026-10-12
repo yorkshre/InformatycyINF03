@@ -41,6 +41,7 @@ function generujTabliczke(){
     var lista=document.getElementById("wynikiLista");
     //czysczenie poprzednich wynikow
     lista.innerHTML="";
+//krok1 walidacja pustych pól lub złego wpisywania np. litera wpisana zamiast liczba
     if (inputVal.trim() == "" || isNaN(inputVal)) {
     komunikat.textContent = "Błąd: wprowadź poprawną liczbę";
     return;
