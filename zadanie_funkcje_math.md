@@ -1,4 +1,61 @@
 1. Zadanie lotto. Zrób program które losuje 6 liczb z zakresu od 1 do 49. Liczby mają być losowanie za pomocą funkcji wbudowanej w Math - liczby nie mogą się powtarzać. Dodaj do tego style i html, zrób z tego aplikacje internetową
+ ```js
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:30px;
+        }
+        
+        ul{
+            margin-top:15px;
+            padding-left: 20px;
+        }
+        button{
+            background-color: blueviolet;
+            color:white;
+            border:none;
+            padding:10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+                <h1>Nagłowek jest to</h1>
+    <p id="demo">cos tam</p>   
+<h1> zadanie lotto</h1> 
+ <p>losuj liczby 6</p>
+    <button onclick="losujLotto()">losuj liczby</button>
+    <!--komunikat o bledzie-->
+    <ul id="wynikiLotto"></ul>
+
+    
+<script> 
+function losujLotto(){
+    var wylosowane = new Set();
+    while (wylosowane.size<6){
+        var liczba = Math.floor(Math.random()*49)+1;
+        wylosowane.add(liczba);
+    }
+    var lista =document.getElementById("wynikiLotto");
+    lista.innerHTML="";
+    wylosowane.forEach(liczba=>{
+        let li = document.createElement("li");
+        li.textContent=liczba;
+        lista.appendChild(li);
+    });
+}
+
+</script>
+</body>
+</html>
+```
 2. **Tabliczka mnożenia**: Napisz skrypt, który generuje tabliczkę mnożenia dla wybranej liczby (od 1 do 10) i wyświetla ją wewnątrz listy `<ul>` w HTML.
 ```js
 <!DOCTYPE html>
@@ -66,4 +123,4 @@ function generujTabliczke(){
 </body>
 </html>
 ```
-4. **Kalkulator** wykonaj kalkulator naukowy zawierający funkcje (+,-,/,*,%,potęgowanie, pierwiastkowanie, walidacja danych), dodaj style css do przyciskow kalkulatora.
+3. **Kalkulator** wykonaj kalkulator naukowy zawierający funkcje (+,-,/,*,%,potęgowanie, pierwiastkowanie, walidacja danych), dodaj style css do przyciskow kalkulatora.
