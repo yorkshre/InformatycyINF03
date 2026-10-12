@@ -123,4 +123,103 @@ function generujTabliczke(){
 </body>
 </html>
 ```
-3. **Kalkulator** wykonaj kalkulator naukowy zawierający funkcje (+,-,/,*,%,potęgowanie, pierwiastkowanie, walidacja danych), dodaj style css do przyciskow kalkulatora.
+3. **Kalkulator** wykonaj kalkulator naukowy zawierający funkcje (+,-,/,*,%,potęgowanie, pierwiastkowanie, walidacja danych), dodaj style css do przyciskow kalkulatora. Zakończ kod:
+   Tak by dodać modulo, mnożenie pierwiastkowanie, potęgowanie.
+
+```js
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:30px;
+        }
+        
+        ul{
+            margin-top:15px;
+            padding-left: 20px;
+        }
+        button{
+            background-color: blueviolet;
+            color:white;
+            border:none;
+            padding:10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h2>Kalkulator naukowy</h2>
+<input type="number" id="calcNum1" placeholder="liczba1">
+<input type="number" id="calcNum2" placeholder="liczba2">
+<br>
+<select id="calcOp">
+    <option value="+">Dodawanie</option>
+        <option value="-">Odejmowanie</option>
+
+            <option value="/">dzielenie</option>
+
+</select>
+<br>
+<button onclick="obliczKalkulator()">Oblicz</button>
+<div id="wynikalkulator"></div>
+
+    
+<script> 
+function obliczKalkulator(){
+    var val1=document.getElementById("calcNum1").value;
+    var val2=document.getElementById("calcNum2").value;
+    var op = document.getElementById("calcOp").value;
+    var wynikDiv=document.getElementById("wynikKalkulator");
+    wynikDiv.className="";
+    wynikDiv.textContent="";
+
+    //walidacja pierwszej liczby
+    if (val1.trim()===""||isNan(val1)){
+        wynikDiv.className="error";
+        wynikDiv.textContent="błąd pierwsza wartosc musi byc liczba";
+        return;
+    }
+    var num1=Number(val1);
+    var num2=0;
+    //sprawdzenie drugiej liczby(jesli operacja tego wymaga)
+    if(op!=='pierwiastek'){
+        if(val2.trim()===""||isNan(val2)){
+            wynikDiv.className="error";
+        wynikDiv.textContent="błąd druga wartosc musi byc liczba";
+        return;
+    }
+    num2=Number(val2);
+        
+        var wynik;
+        switch(op){
+            case '+':
+                wynik =num1+num2;
+                break;
+            case '-':
+                wynik=num1-num2;
+                break;
+            case '/':
+                wynik=num1/num2;
+            default:
+                wynikDiv.className="error";
+                wynikDiv.textContent="błąd nieznana operacja"
+    }
+    wynikDiv.className="succes";
+    wyniDiv.textContent="wynik"+wynik;
+    
+
+    }
+
+}
+
+</script>
+</body>
+</html>
+```
+   
