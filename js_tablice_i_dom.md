@@ -1,7 +1,5 @@
 # Tablice i Operacje na DOM w JavaScript (INF.03)
 
----
-
 ## 1. Tablice Indeksowane (Zwykłe)
 
 Tablice indeksowane służą do przechowywania uporządkowanych list wartości. Indeksowanie w JavaScript zawsze zaczyna się od **0**.
@@ -40,6 +38,41 @@ liczby.forEach(function(liczba, indeks) {
 });
 ```
 
+### Dodatkowe przykłady użycia tablic
+
+#### Wyszukiwanie maksymalnej i minimalnej liczby w tablicy
+```javascript
+let oceny = [3, 5, 2, 4, 6, 5];
+let max = oceny[0];
+let min = oceny[0];
+
+for (let i = 1; i < oceny.length; i++) {
+  if (oceny[i] > max) {
+    max = oceny[i];
+  }
+  if (oceny[i] < min) {
+    min = oceny[i];
+  }
+}
+
+console.log("Najwyższa ocena: " + max);
+console.log("Najniższa ocena: " + min);
+```
+
+#### Filtrowanie elementów (wyciąganie liczb parzystych)
+```javascript
+let liczby = [12, 5, 8, 19, 22, 7];
+let parzyste = [];
+
+for (let i = 0; i < liczby.length; i++) {
+  if (liczby[i] % 2 === 0) {
+    parzyste.push(liczby[i]); // dodajemy do nowej tablicy
+  }
+}
+
+console.log("Liczby parzyste: " + parzyste); // Wynik: 12, 8, 22
+```
+
 ---
 
 ## 2. "Tablice Asocjacyjne" (Obiekty w JS)
@@ -73,6 +106,23 @@ uczen["wiek"] = 19;
 ```javascript
 for (let klucz in uczen) {
   console.log(klucz + ": " + uczen[klucz]);
+}
+```
+
+### Przykład: Tablica obiektów (struktura bazodanowa)
+
+Na egzaminie dane często reprezentowane są jako tablica obiektów (np. lista pracowników lub produktów).
+
+```javascript
+let pracownicy = [
+  { imie: "Anna", stanowisko: "Programista", placa: 7500 },
+  { imie: "Jan", stanowisko: "Tester", placa: 5500 },
+  { imie: "Katarzyna", stanowisko: "Grafik", placa: 6000 }
+];
+
+// Wyświetlenie imion wszystkich pracowników w konsoli
+for (let i = 0; i < pracownicy.length; i++) {
+  console.log(pracownicy[i].imie + " pracuje jako " + pracownicy[i].stanowisko);
 }
 ```
 
@@ -115,6 +165,57 @@ blok.style.fontSize = "20px";
 blok.classList.add("aktywny");
 blok.classList.remove("ukryty");
 blok.classList.toggle("podswietlony");
+```
+
+### Dodatkowe przykłady manipulacji DOM
+
+#### Zmiana atrybutu (np. podmiana zdjęcia)
+```html
+<img id="zdjecie" src="obraz1.jpg" alt="Zdjęcie główne" width="200">
+<br>
+<button onclick="zmienObraz()">Zmień obraz</button>
+
+<script>
+  function zmienObraz() {
+    let img = document.getElementById("zdjecie");
+    
+    if (img.src.includes("obraz1.jpg")) {
+      img.src = "obraz2.jpg";
+      img.alt = "Drugie zdjęcie";
+    } else {
+      img.src = "obraz1.jpg";
+      img.alt = "Zdjęcie główne";
+    }
+  }
+</script>
+```
+
+#### Odczyt danych z pól formularza i walidacja
+```html
+<label>Imię: <input type="text" id="poleImie"></label><br>
+<label><input type="checkbox" id="zgoda"> Zgoda marketingowa</label><br>
+<button onclick="sprawdzFormularz()">Wyślij</button>
+
+<p id="komunikat"></p>
+
+<script>
+  function sprawdzFormularz() {
+    let imie = document.getElementById("poleImie").value;
+    let zgodaZaznaczona = document.getElementById("zgoda").checked;
+    let wynik = document.getElementById("komunikat");
+
+    if (imie === "") {
+      wynik.textContent = "Proszę wpisać imię!";
+      wynik.style.color = "red";
+    } else if (!zgodaZaznaczona) {
+      wynik.textContent = "Musisz wyrazić zgodę, " + imie + "!";
+      wynik.style.color = "orange";
+    } else {
+      wynik.textContent = "Dziękujemy, " + imie + "! Formularz wysłany pomyślnie.";
+      wynik.style.color = "green";
+    }
+  }
+</script>
 ```
 
 ---
@@ -169,7 +270,7 @@ Kompletny przykład HTML + JS przedstawiający wygenerowanie listy produktów z 
 ## 5. Zadania do Samodzielnego Rozwiązania
 
 ### Zadanie 1: Licznik i Średnia z Tablicy
-Napisz skrypt, który zawiera tablicę z ocenami `[3, 4, 5, 2, 4, 5]`. Za pomocą metody `forEach` oblicz ich sumę oraz średnią ocen, a wynik wyświetij w nagłówku `<h3>` na stronie.
+Napisz skrypt, który zawiera tablicę z ocenami `[3, 4, 5, 2, 4, 5]`. Za pomocą metody `forEach` oblicz ich sumę oraz średnią ocen, a wynik wyświetl w nagłówku `<h3>` na stronie.
 
 ### Zadanie 2: Obiekt Książka
 Utwórz obiekt `ksiazka` posiadający właściwości: `tytul`, `autor`, `rokwydania`. Wyświetl te informacje na stronie w postaci listy punktowanej `<ul>`.
