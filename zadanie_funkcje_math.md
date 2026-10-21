@@ -127,99 +127,132 @@ function generujTabliczke(){
    Tak by dodać modulo, mnożenie pierwiastkowanie, potęgowanie.
 
 ```js
-   <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator naukowy</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
-            margin:30px;
+            margin: 30px;
         }
-        
-        ul{
-            margin-top:15px;
+        ul {
+            margin-top: 15px;
             padding-left: 20px;
         }
-        button{
+        button {
             background-color: blueviolet;
-            color:white;
-            border:none;
-            padding:10px 15px;
+            color: white;
+            border: none;
+            padding: 10px 15px;
             border-radius: 4px;
             font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #wynikKalkulator {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
         }
     </style>
 </head>
 <body>
+
 <h2>Kalkulator naukowy</h2>
+
 <input type="number" id="calcNum1" placeholder="liczba1">
 <input type="number" id="calcNum2" placeholder="liczba2">
-<br>
+<br><br>
+
 <select id="calcOp">
     <option value="+">Dodawanie</option>
-        <option value="-">Odejmowanie</option>
-
-            <option value="/">dzielenie</option>
-
+    <option value="-">Odejmowanie</option>
+    <option value="*">Mnożenie</option>
+    <option value="/">Dzielenie</option>
+    <option value="pierwiastek">Pierwiastek</option>
 </select>
 <br>
+
 <button onclick="obliczKalkulator()">Oblicz</button>
-<div id="wynikalkulator"></div>
 
-    
+<!-- Poprawione ID z wynikalkulator na wynikKalkulator -->
+<div id="wynikKalkulator"></div>
+
 <script> 
-function obliczKalkulator(){
-    var val1=document.getElementById("calcNum1").value;
-    var val2=document.getElementById("calcNum2").value;
+function obliczKalkulator() {
+    var val1 = document.getElementById("calcNum1").value;
+    var val2 = document.getElementById("calcNum2").value;
     var op = document.getElementById("calcOp").value;
-    var wynikDiv=document.getElementById("wynikKalkulator");
-    wynikDiv.className="";
-    wynikDiv.textContent="";
-
-    //walidacja pierwszej liczby
-    if (val1.trim()===""||isNan(val1)){
-        wynikDiv.className="error";
-        wynikDiv.textContent="błąd pierwsza wartosc musi byc liczba";
-        return;
-    }
-    var num1=Number(val1);
-    var num2=0;
-    //sprawdzenie drugiej liczby(jesli operacja tego wymaga)
-    if(op!=='pierwiastek'){
-        if(val2.trim()===""||isNan(val2)){
-            wynikDiv.className="error";
-        wynikDiv.textContent="błąd druga wartosc musi byc liczba";
-        return;
-    }
-    num2=Number(val2);
-        
-        var wynik;
-        switch(op){
-            case '+':
-                wynik =num1+num2;
-                break;
-            case '-':
-                wynik=num1-num2;
-                break;
-            case '/':
-                wynik=num1/num2;
-            default:
-                wynikDiv.className="error";
-                wynikDiv.textContent="błąd nieznana operacja"
-    }
-    wynikDiv.className="succes";
-    wyniDiv.textContent="wynik"+wynik;
+    var wynikDiv = document.getElementById("wynikKalkulator");
     
+    wynikDiv.className = "";
+    wynikDiv.textContent = "";
 
+    // Walidacja pierwszej liczby (poprawiono isNaN)
+    if (val1.trim() === "" || isNaN(val1)) {
+        wynikDiv.className = "error";
+        wynikDiv.textContent = "Błąd: pierwsza wartość musi być liczbą";
+        return;
     }
+    
+    var num1 = Number(val1);
+    var num2 = 0;
 
+    // Sprawdzenie drugiej liczby (jeśli operacja tego wymaga)
+    if (op !== 'pierwiastek') {
+        if (val2.trim() === "" || isNaN(val2)) {
+            wynikDiv.className = "error";
+            wynikDiv.textContent = "Błąd: druga wartość musi być liczbą";
+            return;
+        }
+        num2 = Number(val2);
+    }
+        
+    var wynik;
+    
+    switch(op) {
+        case '+':
+            wynik = num1 + num2;
+            break;
+        case '-':
+            wynik = num1 - num2;
+            break;
+        case '*':
+            wynik = num1 * num2;
+            break; // Dodano brakujący break
+        case '/':
+            if (num2 === 0) {
+                wynikDiv.className = "error";
+                wynikDiv.textContent = "Błąd: nie dziel przez zero!"; // Poprawiono z wynik na wynikDiv
+                return;
+            }
+            wynik = num1 / num2;
+            break; // Dodano brakujący break
+        case 'pierwiastek':
+            if (num1 < 0) {
+                wynikDiv.className = "error"; // Poprawiono eror na error
+                wynikDiv.textContent = "Błąd: nie pierwiastkujemy liczby ujemnej";
+                return;
+            }
+            wynik = Math.sqrt(num1); // Dodano obliczanie pierwiastka
+            break;
+        default:
+            wynikDiv.className = "error";
+            wynikDiv.textContent = "Błąd: nieznana operacja";
+            return;
+    }
+    
+    // Wyświetlenie wyniku w divie
+    wynikDiv.textContent = "Wynik: " + wynik;
 }
-
 </script>
+
 </body>
 </html>
-```
+  ```
    
