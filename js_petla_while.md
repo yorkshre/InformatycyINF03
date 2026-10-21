@@ -41,6 +41,26 @@ while (isNaN(podanaLiczba) || podanaLiczba <= 0) {
 console.log("Dziękuję, podałeś liczbę: " + podanaLiczba);
 ```
 
+
+
+### 3. Generowanie elementów na stronie (DOM + INF.03)
+Tworzenie punktów listy `<ul>` na podstawie danych.
+
+```html
+<ul id="lista-wynikow"></ul>
+
+<script>
+  let numer = 1;
+  const lista = document.getElementById("lista-wynikow");
+
+  while (numer <= 4) {
+    let li = document.createElement("li");
+    li.textContent = "Element numer " + numer;
+    lista.appendChild(li);
+    numer++;
+  }
+</script>
+```
 ---
 ## 1. Pętle sterowane warunkiem (`while` oraz `do..while`)
 
@@ -125,26 +145,6 @@ document.write(lyrics);
 
 
 
-
-
-### 3. Generowanie elementów na stronie (DOM + INF.03)
-Tworzenie punktów listy `<ul>` na podstawie danych.
-
-```html
-<ul id="lista-wynikow"></ul>
-
-<script>
-  let numer = 1;
-  const lista = document.getElementById("lista-wynikow");
-
-  while (numer <= 4) {
-    let li = document.createElement("li");
-    li.textContent = "Element numer " + numer;
-    lista.appendChild(li);
-    numer++;
-  }
-</script>
-```
 
 ---
 
