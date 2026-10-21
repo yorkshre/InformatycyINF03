@@ -93,7 +93,7 @@ do {
     puszki--;
 } while (puszki > 0);
 
-```js
+
 // Deklaruje zmienną i przypisuje jej wartość "napoju energetycznego".
 var drink = "napoju energetycznego";
 
