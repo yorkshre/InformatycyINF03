@@ -16,7 +16,7 @@ Na egzaminie zawodowym INF.03 znajomość obiektów przydaje się do:
 
 ### Tworzenie obiektu (Literał obiektu)
 
-```javascript
+``` javascript
 const produkt = {
     nazwa: "Pralka",
     cena: 1200,
@@ -180,7 +180,8 @@ Stwórz stronę HTML z prostym skryptem JS według poniższej specyfikacji.
 4. Podsumowanie zamowienia zostaje wstawione do elementu `#wynik` w formacie:  
    `Zamówienie: [kategoria], sztuk: [sztuki]. Do zapłaty: [suma] zł.`
 
-   ```js
+```javascript
+   
    <!DOCTYPE html>
 <html lang="pl">
 <head>
