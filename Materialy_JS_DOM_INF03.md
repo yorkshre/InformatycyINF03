@@ -248,3 +248,24 @@ Stwórz stronę HTML z prostym skryptem JS według poniższej specyfikacji.
 </html>
 
 ```
+
+### Zadanie do samodzielnego wykonania
+## Treść zadania: Aplikacja internetowa do obliczania kosztów zamówienia.
+
+
+​Strona HTML powinna zawierać:
+​Pole wyboru (<select>) pozwalające wybrać kategorię usługi/produktu.
+​Pole liczbowe (<input type="number">) służące do określenia liczby sztuk.
+​Pole wyboru typu checkbox (<input type="checkbox">) określające, czy wybrano opcję dostawy kurierem.
+
+​Przycisk zatwierdzający (<button>) z etykietą np. „Oblicz”.
+​Element blokowy (np. <div id="wynik"></div>) przeznaczony do wyświetlenia końcowego komunikatu z kwotą do zapłaty.
+
+​Działanie skryptu JavaScript (uruchamiane po kliknięciu przycisku):
+​Pobiera wybraną kategorię, liczbę sztuk oraz stan checkboxa dostawy.
+​Oblicza koszt bazowy w zależności od wybranej kategorii (np. kategoria 1 – 10 zł za sztukę, kategoria 2 – 20 zł za sztukę).
+
+​Uwzględnia liczbę sztuk wpisaną przez użytkownika.
+​Jeśli opcja dostawy kurierem jest zaznaczona, dolicza do całkowitego kosztu stałą opłatę za dostawę (np. 20 zł).
+​Wyświetla sformatowany wynik w elemencie o identyfikatorze wynik w czytelnym dla użytkownika formacie (np. „Do zapłaty: X zł”).
+
