@@ -255,11 +255,11 @@ Stwórz stronę HTML z prostym skryptem JS według poniższej specyfikacji.
 
 ​Strona HTML powinna zawierać:
 ​Pole wyboru (<select>) pozwalające wybrać kategorię usługi/produktu.
-​Pole liczbowe (<input type="number">) służące do określenia liczby sztuk.
-​Pole wyboru typu checkbox (<input type="checkbox">) określające, czy wybrano opcję dostawy kurierem.
+​Pole liczbowe (``` <input type="number"```>) służące do określenia liczby sztuk.
+​Pole wyboru typu checkbox (```<input type="checkbox">```) określające, czy wybrano opcję dostawy kurierem.
 
 ​Przycisk zatwierdzający (<button>) z etykietą np. „Oblicz”.
-​Element blokowy (np. <div id="wynik"></div>) przeznaczony do wyświetlenia końcowego komunikatu z kwotą do zapłaty.
+​Element blokowy (np.``` <div id="wynik"></div>```) przeznaczony do wyświetlenia końcowego komunikatu z kwotą do zapłaty.
 
 ​Działanie skryptu JavaScript (uruchamiane po kliknięciu przycisku):
 ​Pobiera wybraną kategorię, liczbę sztuk oraz stan checkboxa dostawy.
