@@ -179,3 +179,71 @@ Stwórz stronę HTML z prostym skryptem JS według poniższej specyfikacji.
 3. Metoda `obliczRazem()` wylicza łączną kwotę (cena kategorii * sztuki + ewentualny koszt dostawy).
 4. Podsumowanie zamowienia zostaje wstawione do elementu `#wynik` w formacie:  
    `Zamówienie: [kategoria], sztuk: [sztuki]. Do zapłaty: [suma] zł.`
+
+   ```js
+   <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie kosztów</title>
+</head>
+<body>
+
+    <label for="kategoria">Kategoria:</label>
+    <select id="kategoria">
+        <option value="1">Kategoria 1</option>
+        <option value="2">Kategoria 2</option>
+    </select>
+
+    <br><br>
+
+    <label for="sztuki">Liczba sztuk:</label>
+    <input type="number" id="sztuki" value="1" min="1">
+
+    <br><br>
+
+    <input type="checkbox" id="dostawa">
+    <label for="dostawa">Dostawa kurierem</label>
+
+    <br><br>
+
+    <button type="button" id="oblicz">Oblicz</button>
+
+    <!-- Element przeznaczony na wyświetlenie wyniku -->
+    <div id="wynik" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        document.getElementById('oblicz').addEventListener('click', function() {
+            const selectItem = document.getElementById('kategoria');
+            const sztuki = parseFloat(document.getElementById('sztuki').value) || 0;
+            const kategoria = selectItem.value; // Pobieramy wartość wybranej opcji
+            const czyDostawa = document.getElementById('dostawa').checked;
+
+            let koszty = 0;
+
+            // Przykład obliczeń w zależności od wybranej kategorii
+            switch (kategoria) {
+                case "1":
+                    koszty = 10 * sztuki;
+                    break;
+                case "2":
+                    koszty = 20 * sztuki;
+                    break;
+                default:
+                    koszty = 5 * sztuki;
+            }
+
+            // Doliczenie kosztu dostawy, jeśli checkbox jest zaznaczony
+            if (czyDostawa) {
+                koszty += 20;
+            }
+
+            // Bezpośrednie wyświetlenie wyniku w elemencie HTML
+            document.getElementById('wynik').innerHTML = `Do zapłaty: ${koszty} zł`;
+        });
+    </script>
+
+</body>
+</html>
+
+```
